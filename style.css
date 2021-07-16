@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+/* Content section starts */
+.container-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 20px 7%;
+    align-items: center;
+    padding-bottom: 80px;
+    background: #eee;
+
+}
+.container-box .content{
+    flex: 1 1 400px;
+}
+.container-box .image{
+    flex: 1 1 400px;
+}
+.container-box .image svg{
+    width: 100%;
+}
+.container-box .content .title{
+    text-transform: uppercase;
+    color: #97CBA5;
+    font-size: 45px;
+}
+.container-box .content p{
+    color: #666;
+    padding: 5px 0;
+}
+.container-box .content .count-down{
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+.container-box .content .count-down .box{
+    padding: 5px;
+    background: #eee;
+    border: 1px solid #3333;
+    flex: 1 1 20px;
+    text-align: center;
+}
+.container-box .content .count-down .box h3{
+    font-size: 50px;
+    color: #333;
+}
+.container-box .content .count-down .box span{
+    font-size: 20px;
+    color: #97CBA5;
+}
+.container-box .content .btn{
+    display: inline-block;
+    padding: 8px 50px;
+    margin: 10px 0;
+    font-size: 17px;
+    color: #eee;
+    background: #97CBA5;
+    transition: .2s ease-out;
+}
+.container-box .content .btn:hover{
+    letter-spacing: 2px;
+}
+/* Content section ends */
+
+/* Image section starts */
+#gear1{
+    animation: gear1 10s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#gear2{
+    animation: gear1 10s linear infinite reverse;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#bulb #glow{
+    animation: idea 3s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#bulb #glow-in{
+    animation: glow-in 3s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#astronaut{
+    animation: astronaut 2s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes gear1{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform:rotateZ(360deg);
+    }
+}
+@keyframes gear2{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform:rotateZ(180deg);
+    }
+}
+@keyframes idea{
+    to{
+        transform:scale(1.05);
+    }
+}
+@keyframes astronaut{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(5%);
+    }
+}
+@keyframes glow-in{
+    to{
+        transform: scale(1.2);
+    }
+}
+/* Image section ends */
+
+/* Media query Starts */
+@media (max-width:500px){
+    .container-box{
+        padding: 20px;
+    }
+    .container-box .content{
+        text-align: center;
+    }
+    .container-box .content h3{
+        font-size: 35px;
+    }
+    .container-box .content p{
+        font-size: 14px;
+    }
+    .container-box .content .count-down{
+        gap: 5px;
+    }
+    .container-box .content .count-down h3{
+        font-size: 30px;
+    }
+    .container-box .content .count-down span{
+        font-size: 15px;
+    }
+}
+@media (max-width:350px){
+    .container-box{
+        padding: 10px;
+    }
+    .container-box .content{
+        text-align: center;
+    }
+    .container-box .content h3{
+        font-size: 25px;
+    }
+    .container-box .content p{
+        font-size: 10px;
+    }
+    .container-box .content .count-down{
+        flex-flow: wrap;
+    }
+    .container-box .content .count-down h3{
+        font-size: 20px;
+    }
+    .container-box .content .count-down span{
+        font-size: 7.5px;
+    }
+}
+/* Media query Ends */
